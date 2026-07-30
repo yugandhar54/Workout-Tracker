@@ -1,0 +1,275 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f4fbff 0%, #dfefff 100%);
+  color: #183550;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
+.vanta-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.app-shell::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.56);
+  backdrop-filter: blur(6px);
+  z-index: -1;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(24, 53, 80, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+header .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+header nav div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header button,
+header a {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #68b8d7, #4c8eb9);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+header button:hover,
+header a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(76, 142, 185, 0.2);
+}
+
+.pages {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.home .workouts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home form.create {
+  margin: 0;
+}
+
+.hero-panel,
+.workout-details,
+form.create,
+.empty-state {
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 16px 40px rgba(24, 53, 80, 0.1);
+}
+
+.hero-panel {
+  border-radius: 20px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4c8eb9;
+}
+
+.hero-panel h2 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.hero-panel p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, rgba(104, 184, 215, 0.16), rgba(76, 142, 185, 0.08));
+  border: 1px solid rgba(104, 184, 215, 0.2);
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-card strong {
+  font-size: 0.95rem;
+}
+
+.stat-card span {
+  font-size: 0.82rem;
+  color: #4c647c;
+}
+
+.workout-details {
+  border-radius: 16px;
+  margin: 0;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workout-details:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 42px rgba(24, 53, 80, 0.16);
+}
+
+.workout-details h4 {
+  margin: 0 0 10px 0;
+}
+
+.delete-btn,
+.edit-btn {
+  position: absolute;
+  top: 20px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  right: 20px;
+  background: #ff5f5f;
+  color: white;
+}
+
+.edit-btn {
+  right: 90px;
+  background: #68b8d7;
+  color: white;
+}
+
+.empty-state {
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+form.create {
+  border-radius: 20px;
+  margin: 0;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form.create label {
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+form.create input {
+  padding: 10px 12px;
+  margin-top: 4px;
+  border: 1px solid #dfe8f1;
+  border-radius: 10px;
+  outline: none;
+}
+
+form.create input:focus {
+  border-color: #68b8d7;
+  box-shadow: 0 0 0 3px rgba(104, 184, 215, 0.16);
+}
+
+form.create button {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #68b8d7, #4c8eb9);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid #eb4d4d;
+  color: #eb4d4d;
+  border-radius: 10px;
+  margin-top: 6px;
+}
+
+form.create input.error {
+  border: 1px solid #eb4d4d;
+  background: #ffefef;
+}
+
+@media (max-width: 900px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+}
