@@ -1,5 +1,3 @@
-<img width="1917" height="725" alt="Screenshot 2026-07-31 142509" src="https://github.com/user-attachments/assets/f07d6180-fa96-450a-a53c-280cc2bce4ff" /><img width="1917" height="725" alt="Screenshot 2026-07-31 142509" src="https://github.com/user-attachments/assets/997a2f29-f0f5-4c61-a8f5-1f06c07c1eb6" /># 🏋️ Workout Tracker
-
 A modern Workout Tracker application that helps users plan, track, and monitor their fitness journey. The application allows users to log workouts, monitor progress, and maintain a consistent exercise routine through an intuitive interface.
 
 ---
